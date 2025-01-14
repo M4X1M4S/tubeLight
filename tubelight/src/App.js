@@ -1,15 +1,16 @@
 import Body from "./components/Body";
 import Head from "./components/Head";
 import React from "react";
+import Sidebar from "./components/Sidebar";
 
 
-function App() {
+const App=()=> {
   return (
-    <>
-   <Head/>
-   <Body/>
-
-   </>
+    <div>
+    <Head/>
+    <Body/>
+    <Sidebar/>
+   </div>
   );
 }
 
