@@ -11,6 +11,7 @@ const Sidebar = () => {
         <li>Music</li>
         <li>Sports</li>
         <li>News</li>
+        <li>News</li>
         <li>Gmaing</li>
         <li>Movies</li>
       </ul>
