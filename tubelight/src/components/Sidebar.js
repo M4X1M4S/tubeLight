@@ -9,7 +9,7 @@ const Sidebar = () => {
       <h1 className='font-semibold'> Explore</h1>
       <ul>
         <li>Music</li>
-        <li>Sports</li>
+
         <li>News</li>
         <li>News</li>
         <li>Gmaing</li>
