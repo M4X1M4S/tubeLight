@@ -1,8 +1,15 @@
 import React from 'react'
 
-const VideoCard = () => {
+const VideoCard = ({info}) => {
+  const {snippet,localized,title,statistics}=info;
+  console.log(snippet)
   return (
-    <div>VideoCard</div>
+    
+    <div>
+      <img src={snippet.thumbnails.default.url} alt={title} />
+      <h1>{title}</h1>
+      <h3>{snippet.channelTitle}</h3>
+    </div>
   )
 }
 
