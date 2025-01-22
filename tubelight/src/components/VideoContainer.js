@@ -3,7 +3,7 @@ import VideoCard from './VideoCard'
 
 const VideoContainer = () => {
   
-  const apiKey='AIzaSyAfYzrgL0536sjO_s8R0lIpi5cUvnk7iCQ';
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     getVideos();
