@@ -6,7 +6,7 @@ const VideoCard = ({info}) => {
   return (
     
     <div>
-      <img src={snippet.thumbnails.default.url} alt={title_img} />
+      <img src={snippet.thumbnails.default.url} alt='title' />
       <h1>{title}</h1>
       <h3>{snippet.channelTitle}</h3>
     </div>
