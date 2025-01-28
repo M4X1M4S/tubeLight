@@ -1,14 +1,21 @@
 import React from 'react'
 
 const VideoCard = ({info}) => {
-  const {snippet,localized,title,statistics}=info;
-  console.log(snippet)
+  const {snippet,statistics}=info;
+const { channelTitle,localized,thumbnails}=snippet;
+
+
   return (
     
-    <div>
-      <img src={snippet.thumbnails.default.url} alt='title' />
-      <h1>{title}</h1>
-      <h3>{snippet.channelTitle}</h3>
+    <div className='m-2 p-2 shadow-md'>
+      <img className='rounded-lg'src={thumbnails.medium.url} alt='title' />
+      <ul>
+      <li className='whitespace-normal break-words max-w-80'>{localized.title}</li>
+      <li>{channelTitle}</li>
+      <li>{statistics.viewCount}</li>
+      </ul>
+      
+      
     </div>
   )
 }
