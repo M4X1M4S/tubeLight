@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import VideoCard from './VideoCard'
 import { Link } from 'react-router-dom';
 
+
 const VideoContainer = () => {
 
   // const apiKey = process.env.REACT_APP_YT_API_key;
@@ -18,11 +19,11 @@ const VideoContainer = () => {
     console.log(data);
     setVideos(data.items);
   }
-
+ 
 
   return (
     <div className=' flex flex-wrap '>
-      {videos.map((video) => <Link to={'/watch?v='+video.id}><VideoCard info={video}/></Link>)}
+      {videos.map((video) => <Link to={'/watch?v='+video.id} ><VideoCard info={video}/></Link>)}
      
     </div>
   )
