@@ -1,0 +1,20 @@
+Debouncing...
+
+search bar functionality..
+
+typing slow-> time difference between 2 key strokes -> lets say 200ms
+
+typing fast-> time ifference between 2 key strokes -> lets say 20ms
+
+
+for example -> typed -> i phone 15 pro (14keystrokes)
+
+if typing slowly -> 14 api calls
+if typing fast (Debouncing)-> 3 api calls
+
+
+
+Q: Debouncing with 200ms?
+ans: this means if time difference between 2 key strokes is less than 200ms->Decline the api call.
+     ans if difference is greater then 200ms -> make api call
+
