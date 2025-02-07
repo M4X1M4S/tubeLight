@@ -3,6 +3,7 @@ import '../index.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleHamburger } from '../Utils/hamburgerSlice'
 import { cacheResults } from '../Utils/searchSlice'
+import { Link } from 'react-router-dom'
 
 const Head = () => {
   const [search,setSearch]=useState('');
