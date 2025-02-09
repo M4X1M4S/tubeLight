@@ -8,7 +8,7 @@ import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
 import SearchPage from "./components/SearchPage";
 
-const appRouter=createBrowserRouter([{
+export const appRouter=createBrowserRouter([{
   path:'/',
   element:<Body/>,
   children:[
@@ -19,9 +19,11 @@ const appRouter=createBrowserRouter([{
   {
     path:'/watch',
     element:<WatchPage/>
-  },{
+  },
+  {
     path:'/search',
-    element:<SearchPage/>}
+    element:<SearchPage/>
+  }
   ]
 
 }])
@@ -29,10 +31,11 @@ const App=()=> {
   
   return (
     <Provider store={store}>
-      <div>
+    
+    
     <Head/>
     <RouterProvider router={appRouter}/>
-    </div>
+   
     </Provider>
   );
 }

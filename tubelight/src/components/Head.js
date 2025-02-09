@@ -3,13 +3,16 @@ import '../index.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleHamburger } from '../Utils/hamburgerSlice'
 import { cacheResults } from '../Utils/searchSlice'
-import { Link } from 'react-router-dom'
+import history from '../Utils/history'
+import { appRouter } from '../App'
 
 const Head = () => {
   const [search,setSearch]=useState('');
   const[suggestions,setSuggestions]=useState([]);
   const[showSuggestions, setShowSuggestions]=useState(false);
   const state=useSelector((store)=>store.searchCache); 
+
+ 
 
  
   useEffect(()=>{
@@ -37,6 +40,9 @@ const Head = () => {
   const handleClick =()=>{
     dispatch(toggleHamburger());
   }
+  const handleClickSearch=()=>{
+    appRouter.navigate('/search?s='+search);
+  }
   return (
     <div className=' grid grid-flow-col shadow-md  h-16 fixed top-0 left-0 bg-white w-full  '>
       <div className='flex  w-1/2'>
@@ -52,7 +58,7 @@ const Head = () => {
           className=" w-9/12 border-2 rounded-l-xl"
            type="text" placeholder="Search" />
 
-          <button className=" border-2 rounded-r-xl">🔍</button>
+          <button onClick={handleClickSearch}className=" border-2 rounded-r-xl">🔍</button>
           <div className=' w-[32.5rem] rounded-lg shadow-lg border-gray-100 fixed bg-white position-absolute'>
           <ul>
             {showSuggestions&&suggestions.map(s=><li className='p-1 m-1 hover:bg-gray-50'>{s}</li>)}
@@ -69,4 +75,4 @@ const Head = () => {
   )
 }
 
-export default Head
+export default Head;
