@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom';
-import VideoCard from './VideoCard';
+
 import { Link } from 'react-router-dom';
+import Searchcard from './Searchcard';
 
 const SearchPage = () => {
   const [searchResult,setSearchResult]=useState([]);
@@ -19,7 +20,7 @@ const getSearchResults=async()=>{
 }
   return (
      <div>
-      {searchResult.map((video)=><Link to={'/watch?v='+video.id.videoId}><VideoCard info={video}/></Link>)}
+      {searchResult.map((video)=><Link to={'/watch?v='+video.id.videoId}><Searchcard info={video}/></Link>)}
      </div>  )
 }
 
